@@ -29,14 +29,17 @@ public:
         // Vertical Scanning
         
         /* 
-        // Best Case: O(n), where n is the length of the shortest string, and 
-        // the comparison stops after the first vertical scan due to a 
-        // mismatch at an early stage.
+        // Best Case: O(n), where n is the number of strings in the vector
+        // of strings. For example, this happens when there are no common 
+        // prefixes.
 
-        // Worst Case: O(S), where S is the sum of the lengths of all strings, 
-        // and you end up comparing most or all characters in all strings 
-        // because they share a long common prefix or the shortest string is 
-        // entirely a common prefix.
+        // Worst Case: O(n x m), where n is the number of strings in the 
+        // vector of strings and m is the size of the shortest common string. 
+        // For example, this happens when all the strings are the same.
+
+        // Space complexity: O(m) for all cases, where m is the size of the 
+        // shortest common string.
+
         if (strs.empty()) return ""; // Early return for empty input
 
         std::string common_prefix;
@@ -48,7 +51,7 @@ public:
         for (size_t j = 0; j < strs[0].size(); ++j) {
             char c = strs[0][j];    // This is candidate common character
 
-            // We go over the j + 1th character of each string and if all the 
+            // We go over the jth character of each string and if all the 
             // strings have this character, then we add it to the common 
             // prefix string.
             for (size_t i = 1; i < strs.size(); ++i) {

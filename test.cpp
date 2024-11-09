@@ -18,7 +18,7 @@ public:
             // If the current value is less than the next value, it means this 
             // is a subtraction case. For example, when we are at 'I' for the 
             // number "IX".
-            if (i + 1 < s.size() and values[s[i]] < values[s[i + 1]]) {
+            if (i + 1 < s.size() && values[s[i]] < values[s[i + 1]]) {
                 integer_number += values[s[i + 1]] - values[s[i]];
                 ++i; // Skip the next character since we have already 
                      // processed it.

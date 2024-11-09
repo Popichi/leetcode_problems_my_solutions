@@ -73,10 +73,11 @@ public:
             x /= 10;
         }
 
-        // As explained above the reversed half will contain middle digit 
-        // of the original number as its last digit. So, you should remove the 
-        // last digit from the reversed number. This can be done by dividing 
-        // it by 10 during the comparison.
+        // As explained above, for numbers with an odd number of digits, the 
+        // reversed half will contain middle digit of the original number as 
+        // its last digit. So, you should remove the last digit from the 
+        // reversed number. This can be done by dividing it by 10 during the 
+        // comparison.
         // For example, when a palindrome number with odd number of digits goes
         // into the while loop, we get:
         // 1) Initially, x = 12321, and reversedHalf = 0.
