@@ -71,24 +71,24 @@ public:
 
         // For lexicographically sorting the list of strings:
         // The cost of sorting an array of strings lexicographically is 
-        // O(NlogN), where NN is the number of strings. However, this doesn't 
+        // O(NlogN), where N is the number of strings. However, this doesn't 
         // account for the comparison cost of the strings themselves during 
         // the sort operation.
         // The comparison of two strings in the worst case can be up to 
         // O(M), where M is the length of the longest string in the array. 
         // Therefore, the sorting step can be more precisely estimated as 
-        // O(NlogN⋅M).
+        // O(NlogN*M).
 
         // For comparing the first and last string:
         // The best case for the comparison step would be O(1), occurring if 
         // the first character of the first and last strings in the sorted 
         // array differs, indicating there is no common prefix.
         // The worst case for the comparison of the first and last strings 
-        // would be O(M), where M is the length of the longest in the list if 
-        // all of the strings are the same.
+        // would be O(S), where S is the length of the shorter string between 
+        // the first and last, and they share a long common prefix.
 
-        // Best Case Runtime: O(Nlog⁡N⋅M)+O(1)~=O(Nlog⁡N⋅M)
-        // Worst Case Runtime: O(Nlog⁡N⋅M)+O(M)~=O(Nlog⁡N⋅M)
+        // Best Case Runtime: O(Nlog⁡N*M) + O(1) ~= O(Nlog⁡N*M)
+        // Worst Case Runtime: O(Nlog⁡N*M) + O(s) ~= O(Nlog⁡N*M)
 
         // If you sort the strings lexicographically before finding the 
         // longest common prefix, you can optimize the problem slightly. Once 
