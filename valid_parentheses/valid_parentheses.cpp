@@ -31,6 +31,17 @@ Constraints:
 1 <= s.length <= 104
 s consists of parentheses only '()[]{}'.*/
 
+// Time complexity: O(n) where n is the length of the input string. We traverse the input 
+// string only once. Therefore, we get O(n) time complexity in both worst and best case 
+// scenarios.
+
+// Space complexity: O(n) where n is the length of the input string. In the worst case, an input 
+// might consist of only opening brackets, braces and / or parentheses. Therefore, we get O(n) space 
+// complexity in the worst case. In the best case, the string might be have a closing bracket, 
+// brace and / or parentheses which means the algorithm terminates without storing anything in the 
+// stack.
+
+
 class Solution {
 public:
     bool isValid(string s) {
