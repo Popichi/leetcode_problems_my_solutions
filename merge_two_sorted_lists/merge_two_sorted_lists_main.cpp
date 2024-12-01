@@ -63,6 +63,11 @@ public:
 
 #else
         // Recursive version
+        // To make clear how the recursive version works, I followed the algorithm by hand using 
+        // the test case 1 in the main, where List1 = [1, 2, 4] and List2 = [1, 3, 4]. This 
+        // solution by hand can be found in the PDF filed named "LeetCode, 21 Merge Two Sorted 
+        // Lists, Recursive Solution.pdf". It can be found in the same folder under where this 
+        // solution is located.
         if (!list1 || !list2) {
             return list1 ? list1 : list2;
         }
