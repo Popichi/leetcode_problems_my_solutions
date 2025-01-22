@@ -3,7 +3,7 @@
 #include <cassert>
 
 // Uncomment this if you want to use your current approach
-#define USE_ERASE_METHOD 
+//#define USE_ERASE_METHOD 
 
 class Solution {
 public:
