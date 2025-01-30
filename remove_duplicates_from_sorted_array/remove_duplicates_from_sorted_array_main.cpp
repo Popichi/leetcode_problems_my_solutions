@@ -2,13 +2,13 @@
 #include <vector>
 #include <cassert>
 
-// Uncomment this if you want to use your current approach
+// Uncomment the following line to test the erase-based solution
 //#define USE_ERASE_METHOD 
 
 class Solution {
 public:
 #ifdef USE_ERASE_METHOD
-    // Your erase-based approach (but corrected)
+    // Erase-based approach
     int removeDuplicates(std::vector<int>& nums) {
         if (nums.size() < 2) return nums.size();
 
